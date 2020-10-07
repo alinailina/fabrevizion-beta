@@ -1,0 +1,91 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  margin-bottom: 150px;
+
+  @include phone {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  > p {
+    @include text;
+    a {
+      @include link;
+    }
+  }
+
+  // Будьте в курсе
+  .form {
+    padding: 15px 0 10px;
+
+    > p {
+      @include heading;
+    }
+
+    form {
+      display: flex;
+      align-items: flex-start;
+      max-width: 40em;
+
+      label {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 10px;
+
+        input {
+          @include text;
+          padding: 10px 5px;
+          border: 1px solid $black;
+          background-color: inherit;
+          outline: none;
+          -webkit-appearance: none;
+          border-radius: 1px;
+          margin: 10px 0 0;
+        }
+
+        p {
+          @include small-text;
+          a {
+            @include link;
+          }
+        }
+      }
+
+      // Подписаться
+      input[type="submit"] {
+        @include button;
+
+        @include text;
+
+        text-align: center;
+        width: 200px;
+
+        @include desktop {
+          min-width: 200px;
+          width: 10vw;
+          font-size: 1.5vw;
+        }
+      }
+
+      @include phone {
+        flex-direction: column;
+
+        label {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  // Политика конфиденциальности
+  > p:last-of-type {
+    @include small-text;
+  }
+}

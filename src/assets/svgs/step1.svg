@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1000" viewBox="0 0 2000 1000">
+  <g id="Group_168" data-name="Group 168" transform="translate(-11691 -1808)">
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="2000" height="1000" transform="translate(11691 1808)" fill="none"/>
+    <g id="shirt_2_" data-name="shirt (2)" transform="translate(12073 2064)">
+      <g id="Group_162" data-name="Group 162">
+        <path id="Path_138" data-name="Path 138" d="M459.376,34.352,356.864,1.168A23.853,23.853,0,0,0,349.48,0H130.52a23.833,23.833,0,0,0-7.384,1.168L20.12,34.536A31.848,31.848,0,0,0,0,64.248V408a8,8,0,0,0,8,8H80v56a8,8,0,0,0,8,8H392a8,8,0,0,0,8-8V416h72a8,8,0,0,0,8-8V64.248A32,32,0,0,0,459.376,34.352ZM311.528,16a72,72,0,0,1-143.056,0ZM464,400H400V136H384V464H96V136H80V400H16V64.248A15.793,15.793,0,0,1,25.544,49.6L128.056,16.392A8.052,8.052,0,0,1,130.52,16h21.888a87.952,87.952,0,0,0,175.2,0H349.5a8.3,8.3,0,0,1,2.464.384l102,33.008A15.911,15.911,0,0,1,464,64.248Z" fill="#323232"/>
+      </g>
+    </g>
+    <g id="jean" transform="translate(12732 2068)">
+      <g id="Group_163" data-name="Group 163" transform="translate(16)">
+        <path id="Path_139" data-name="Path 139" d="M452.333,0H23.933A7.934,7.934,0,0,0,16,7.933V468.067A7.934,7.934,0,0,0,23.933,476h190.4a7.934,7.934,0,0,0,7.933-7.235l15.867-180.174L254,468.765A7.934,7.934,0,0,0,261.933,476h190.4a7.934,7.934,0,0,0,7.933-7.933V7.933A7.934,7.934,0,0,0,452.333,0ZM31.867,63.467H134.6A111.067,111.067,0,0,1,31.867,166.2ZM444.4,460.133H269.2l-23.134-262.5a7.933,7.933,0,0,0-15.8,0l-23.2,262.5H31.867V182.062a126.933,126.933,0,0,0,118.6-118.6H206.4V142.8h15.867V63.467H254V142.8h15.867V63.467H325.8a126.933,126.933,0,0,0,118.6,118.6Zm0-293.938A111.067,111.067,0,0,1,341.671,63.467H444.4Zm0-118.6H269.867V31.733H254V47.6H222.267V31.733H206.4V47.6H31.867V15.867H444.4Z" transform="translate(-16)" fill="#323232"/>
+      </g>
+    </g>
+    <line id="Line_45" data-name="Line 45" x2="68" transform="translate(12361.5 2449.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_46" data-name="Line 46" y2="34" transform="translate(12382.5 2432.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_47" data-name="Line 47" y2="34" transform="translate(12406.5 2432.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_48" data-name="Line 48" y2="53" transform="translate(13059.5 2286.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_49" data-name="Line 49" y2="53" transform="translate(13082.5 2286.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_50" data-name="Line 50" x2="69" transform="translate(13035.5 2303.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+    <line id="Line_51" data-name="Line 51" x2="69" transform="translate(13035.5 2323.5)" fill="none" stroke="#323232" stroke-linecap="round" stroke-width="10"/>
+  </g>
+</svg>

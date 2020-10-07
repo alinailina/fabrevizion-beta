@@ -1,0 +1,102 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // All posts
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // Single post
+    i,
+    .post {
+      width: 31%;
+
+      @include tablet {
+        width: 49%;
+      }
+
+      @include phone {
+        width: 100%;
+      }
+      margin-bottom: 50px;
+      @include tablet {
+        margin-bottom: 75px;
+      }
+      @include desktop {
+        margin-bottom: 5vw;
+      }
+
+      > p {
+        @include text;
+        // Date + post type
+        &:first-of-type,
+        &:nth-of-type(2) {
+          @include small-text;
+        }
+      }
+
+      // Img
+      img {
+        width: 100%;
+      }
+
+      // Title
+      h3 {
+        @include text;
+        font-weight: 400;
+      }
+
+      // Tags
+      > div {
+        p {
+          @include small-text;
+          margin: 0;
+        }
+        margin-bottom: 25px;
+      }
+
+      // Link
+
+      a {
+        @include text;
+        @include link;
+        color: $black;
+      }
+    }
+  }
+
+  // Full post
+  p {
+    @include text;
+  }
+
+  // Date
+  .date {
+    @include small-text;
+    margin-bottom: 25px;
+  }
+
+  // Img description
+  .description {
+    @include small-text;
+    margin-bottom: 50px;
+  }
+
+  .tags {
+    p {
+      @include large-text;
+      margin: 0;
+    }
+  }
+}

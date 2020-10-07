@@ -1,0 +1,153 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // Info
+  > section:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    p {
+      display: block;
+      width: 30%;
+      @include text;
+      a {
+        @include link;
+      }
+
+      span {
+        display: block;
+        @include small-text;
+        margin-bottom: 25px;
+      }
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      p {
+        width: 45%;
+        span {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+      p {
+        width: 100%;
+
+        span {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  // Или воспользуйтесь нашей формой
+  > section:nth-of-type(2) {
+    > h3 {
+      @include heading;
+      margin: 50px 0 25px;
+
+      @include phone {
+        margin: 0;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          width: 45%;
+        }
+
+        @include phone {
+          flex-direction: column;
+          label {
+            width: 100%;
+          }
+        }
+      }
+
+      label {
+        //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        @include small-text;
+
+        p {
+          a {
+            @include link;
+          }
+        }
+
+        margin: 15px 0;
+        margin-bottom: 25px;
+
+        @include desktop {
+          margin-bottom: 35px 0;
+        }
+
+        input,
+        textarea {
+          @include text;
+          border: none;
+          padding: 10px 5px;
+          border: 1px solid $black;
+          background-color: inherit;
+          outline: none;
+          -webkit-appearance: none;
+          border-radius: 1px;
+          margin: 10px 0 0;
+        }
+
+        textarea {
+          //background-color: $gray;
+          resize: none;
+
+          &:focus {
+            height: 200px;
+            @include desktop {
+              height: 300px;
+            }
+          }
+        }
+      }
+
+      // Отправить
+      input[type="submit"] {
+        @include button;
+        @include text;
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        text-align: center;
+        width: 200px;
+        @include desktop {
+          min-width: 200px;
+          width: 10vw;
+          font-size: 1.5vw;
+        }
+      }
+
+      @include phone {
+        padding: 25px 0 50px;
+      }
+    }
+  }
+}
