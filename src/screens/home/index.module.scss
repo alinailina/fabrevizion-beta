@@ -23,11 +23,11 @@
   }
 
   .hero {
-    border-top: 1px solid;
+    //border-top: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.25);
     width: 100%;
 
     > div {
@@ -52,7 +52,7 @@
 
         margin: 0 1vw;
         font-family: "Lato", sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         text-transform: uppercase;
         @include phone {
           margin-top: 10vw;
@@ -115,7 +115,7 @@
 
     // Img
     > div {
-      width: 15%;
+      width: 20%;
       @include tablet {
         width: 25%;
       }
@@ -123,10 +123,10 @@
         width: 35%;
       }
       margin: 0 auto;
-      margin-bottom: 50px;
+
       img {
         width: 100%;
-        border: 1px solid;
+        //border: 1px solid;
         border-radius: 50%;
       }
     }
@@ -136,10 +136,6 @@
       @include container;
       @include large-text;
       margin-bottom: 50px;
-
-      span {
-        @include highlight;
-      }
 
       a {
         @include large-text;
@@ -155,7 +151,7 @@
 
   .parallaxImg2 {
     // Parallax
-    background-image: url("../../assets/bg1.svg");
+    background-image: url("../../assets/used-apparel.svg");
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -171,7 +167,7 @@
 
   .parallaxImg3 {
     // Parallax
-    background-image: url("../../assets/bg2.svg");
+    background-image: url("../../assets/recycled-apparel.svg");
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -190,12 +186,18 @@
     background-color: white;
     > div {
       @include container;
-      padding: 100px 0;
+      padding: 150px 0;
+      @include desktop {
+        padding: 10vw 0;
+      }
       text-align: center;
 
       > p {
         @include text;
         margin-bottom: 50px;
+        @include desktop {
+          margin-bottom: 4vw;
+        }
       }
 
       ul {
@@ -214,17 +216,27 @@
             width: 45%;
           }
           margin-bottom: 50px;
+          @include desktop {
+            margin-bottom: 0px;
+          }
 
-          // Img
+          // Arrows
           > div {
-            width: 50%;
+            //border: 1px solid;
             margin: 0 auto;
-            margin-bottom: 25px;
-            @include tablet {
+
+            @include desktop {
               width: 30%;
+              margin-bottom: 1vw;
+            }
+
+            @include tablet {
+              width: 15%;
+              margin-bottom: 10px;
             }
             @include phone {
-              width: 40%;
+              width: 25%;
+              margin-bottom: 0px;
             }
             img {
               width: 100%;

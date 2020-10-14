@@ -306,7 +306,8 @@ footer {
       > div:first-of-type {
         display: flex;
         align-items: center;
-
+        position: relative;
+        left: -15px;
         h3 {
           font-family: "Lato", sans-serif;
           font-weight: 100;
@@ -392,7 +393,7 @@ footer {
 
           display: flex;
           justify-content: space-between;
-          width: 50%;
+          width: 40%;
           max-width: 20em;
 
           li {

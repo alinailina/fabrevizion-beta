@@ -4,7 +4,8 @@
 $black: #202124;
 $linen: #fff1e6;
 $brown: #ddbea9;
-$gray: #f0efeb;
+$gray: #f2f2f2;
+$dark-gray: #e0e0e0;
 $green: #a9d767;
 $yellow: #f9e76f;
 
@@ -38,6 +39,18 @@ body {
 // Text highlight
 @mixin highlight {
   background: linear-gradient(to top, $linen 40%, transparent 40%);
+}
+
+.highlight-linen {
+  background: linear-gradient(to top, $linen 40%, transparent 40%);
+}
+
+.highlight-gray {
+  background: linear-gradient(to top, $gray 30%, transparent 30%);
+}
+
+.highlight-green {
+  background: linear-gradient(to top, $green 30%, transparent 30%);
 }
 
 // Margins container

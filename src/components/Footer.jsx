@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div>
               <img
-                src={require("../assets/cotton-circled.svg")}
+                src={require("../assets/logo.svg")}
                 alt="recycled-cotton"
               />
             </div>

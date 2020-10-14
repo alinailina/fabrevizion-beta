@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Children
 import Header from "../../components/Header";
+import Infographic from "./Infographic";
 
 // Styles
 import styles from "./index.module.scss";
@@ -55,7 +56,7 @@ const About = () => {
           </p>
         </li>
       </ul>
-
+      <Infographic />
       <p>
         Используя новейшие технологии, мы экономим огромное количество пресной
         воды и других полезных ресурсов. Волокно из переработанного текстиля -

@@ -67,6 +67,18 @@
   }
 }
 
+.infographic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    @include text;
+    @include link;
+    margin: 0 0 25px 0;
+  }
+}
+
 // Как мы работаем
 .process {
   @include container;
