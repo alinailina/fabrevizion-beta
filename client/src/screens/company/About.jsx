@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // Children
 import Header from "../../components/Header";
-import Infographic from "./Infographic";
+//import Infographic from "./Infographic";
 
 // Styles
 import styles from "./index.module.scss";

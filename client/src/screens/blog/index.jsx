@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import SkeletonComponent from "./SkeletonComponent";
+import SkeletonComponent from "./SkeletonComponent";
 
 // Styles
 import styles from "./index.module.scss";
@@ -39,9 +39,9 @@ const Blog = () => {
   return (
     <div className={styles.container}>
       <Header title="Блог" />
-      <Filters posts={posts} />
-      {/* {loading && <SkeletonComponent />}
-      {!loading && <Posts posts={posts} />} */}
+     
+      {loading && <SkeletonComponent />}
+      {!loading &&  <Filters posts={posts} />} 
       <BackToTop />
     </div>
   );
