@@ -1,0 +1,227 @@
+@import "../../index.scss";
+
+// О нас
+.about {
+  @include container;
+  margin-bottom: 150px;
+
+  @include phone {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  > p {
+    @include text;
+
+    span {
+      @include highlight;
+    }
+
+    a {
+      @include link;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: flex-start;
+
+      // Bullet point
+      > span {
+        display: block;
+        @include phone {
+          width: 8px;
+          margin-top: 0px;
+          margin-right: 2vw;
+        }
+        @include tablet {
+          width: 10px;
+          margin-top: 6px;
+          margin-right: 2vw;
+        }
+        @include desktop {
+          width: 10px;
+          margin-top: 0.3vw;
+          margin-right: 2vw;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      > p {
+        width: 90%;
+        @include text;
+        margin: 0;
+        a {
+          @include link;
+        }
+      }
+
+      margin-bottom: 10px;
+    }
+  }
+
+  // Наша команда
+  > div:last-of-type {
+    h3 {
+      @include heading;
+    }
+    p {
+      @include text;
+      a {
+        @include link;
+      }
+    }
+  }
+}
+
+.infographic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    @include text;
+    @include link;
+    margin: 0 0 25px 0;
+  }
+}
+
+// Как мы работаем
+.process {
+  @include container;
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      // Order num
+      span {
+        @include text;
+        margin-bottom: 50px;
+        @include phone {
+          margin-bottom: 25px;
+        }
+        @include desktop {
+          margin-bottom: 5vw;
+        }
+      }
+
+      // Graphic
+      div:first-of-type {
+        width: 60%;
+        margin-bottom: 25px;
+        @include desktop {
+          margin-bottom: 2.5vw;
+        }
+      }
+
+      // Text
+      div:nth-of-type(2) {
+        width: 100%;
+
+        p {
+          display: block;
+          @include text;
+
+          a {
+            @include link;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Наши принципы
+.principles {
+  @include container;
+  margin-bottom: 150px;
+
+  @include phone {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // Graphic
+  > div:first-of-type {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    @include desktop {
+      margin-bottom: 2.5vw;
+    }
+  }
+
+  p {
+    @include text;
+    .name {
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+    }
+
+    a {
+      @include link;
+    }
+  }
+
+  // Цур
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+    @include phone {
+      padding: 50px 0 25px;
+    }
+    @include tablet {
+      padding: 50px 0 25px;
+    }
+
+    // Icon
+    > div {
+      @include phone {
+        width: 45%;
+        margin-bottom: 25px;
+      }
+
+      @include tablet {
+        width: 31%;
+        margin-bottom: 25px;
+      }
+
+      @include desktop {
+        width: 15%;
+      }
+
+      overflow: hidden;
+      img {
+        width: 100%;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}

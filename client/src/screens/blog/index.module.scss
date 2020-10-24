@@ -1,0 +1,163 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // Filters
+  .filters {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+
+      li {
+        @include small-text;
+        padding: 1vw 2vw;
+
+        cursor: pointer;
+        &:hover {
+          color: $green;
+        }
+      }
+
+      @include phone {
+        justify-content: flex-start;
+        li {
+          padding: 2vw 0;
+          padding-right: 5vw;
+        }
+      }
+    }
+  }
+
+  // All posts
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // Single post
+    i,
+    .post {
+      @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      @media only screen and (min-width: 550px) {
+        width: 49%;
+        margin-bottom: 25px;
+      }
+
+      @include tablet {
+        width: 31%;
+        margin-bottom: 50px;
+      }
+
+      @include desktop {
+        width: 31%;
+        margin-bottom: 2vw;
+      }
+
+      > p {
+        @include text;
+        // Date + post type
+        &:first-of-type,
+        &:nth-of-type(2) {
+          @include small-text;
+        }
+      }
+
+      // Img
+      img {
+        width: 100%;
+      }
+
+      // Title
+      h3 {
+        @include text;
+        font-weight: 300;
+      }
+
+      // Tags
+      > div {
+        p {
+          @include small-text;
+          margin: 0;
+        }
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+// Full post
+.fullPost {
+  @include container;
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // Full post
+  h1 {
+    @include heading;
+  }
+
+  .img {
+    width: 50%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: 300;
+    margin-top: 5vw;
+  }
+
+  p {
+    @include small-text;
+    b {
+      font-weight: 400;
+    }
+  }
+
+  // Date
+  .date {
+    @include small-text;
+    margin-bottom: 25px;
+  }
+
+  // Img description
+  .description {
+    @include small-text;
+    margin-bottom: 50px;
+  }
+
+  .tags {
+    p {
+      @include heading;
+      margin: 0;
+    }
+  }
+}

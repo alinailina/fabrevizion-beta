@@ -1,0 +1,374 @@
+@import "../../index.scss";
+
+.container {
+  // Hero
+  .card1 {
+    // Parallax
+    background-image: url("../../assets/sheets.jpg");
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    @include phone {
+      min-height: 90vh;
+      background-attachment: scroll;
+    }
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+    display: flex;
+
+    .innerCard1 {
+      //border-top: 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+
+      > div {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Title
+        h1 {
+          @include phone {
+            font-size: 12vw;
+          }
+
+          @include tablet {
+            font-size: 5rem;
+          }
+
+          @include desktop {
+            font-size: 8vw;
+          }
+
+          margin: 0 1vw;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 200;
+          text-transform: uppercase;
+          @include phone {
+            margin-top: 10vw;
+          }
+        }
+
+        // Tagline
+        p {
+          @include heading;
+          text-align: center;
+        }
+
+        // Links
+        > div {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          // Подробнее о нас
+          a:first-of-type {
+            @include button;
+            width: 45%;
+            background-color: transparent;
+            &:hover {
+              background-color: $green;
+            }
+          }
+
+          // Связаться
+          a:nth-of-type(2) {
+            @include button;
+            @include text;
+            width: 45%;
+          }
+
+          @include phone {
+            flex-direction: column;
+            width: 90%;
+
+            a {
+              width: 100%;
+              text-align: center;
+              &:first-of-type {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Texts
+  .card2,
+  .card4 {
+    background-color: $linen;
+    padding: 100px 0;
+    @include desktop {
+      padding: 10vw 0;
+    }
+    text-align: center;
+
+    p {
+      display: block;
+      @include container;
+      @include text;
+      margin-bottom: 25px;
+
+      a {
+        @include text;
+        @include link;
+      }
+    }
+
+    a {
+      @include text;
+      @include link;
+    }
+
+    &:last-of-type {
+    }
+  }
+
+  // Img
+  .card3 {
+    // Parallax
+    background-image: url("../../assets/bg1.svg");
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 60vh;
+    @include phone {
+      background-attachment: scroll;
+    }
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Img
+  .card5 {
+    // Parallax
+    background-image: url("../../assets/bg2.svg");
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 60vh;
+    @include phone {
+      background-attachment: scroll;
+    }
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // 4R
+  .card6 {
+    background-color: $linen;
+
+    > div {
+      @include container;
+      padding: 100px 0;
+      @include desktop {
+        padding: 10vw 0;
+      }
+      text-align: center;
+
+      > p {
+        @include text;
+        margin-bottom: 50px;
+        @include desktop {
+          margin-bottom: 4vw;
+        }
+      }
+
+      ul {
+        width: 80%;
+        @include phone {
+          width: 100%;
+        }
+        @include desktop {
+          width: 100%;
+        }
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          width: 23%;
+          @include tablet {
+            width: 45%;
+          }
+          @include phone {
+            width: 45%;
+          }
+          margin-bottom: 50px;
+          @include desktop {
+            margin-bottom: 0px;
+          }
+
+          // Arrows
+          > div {
+            margin: 0 auto;
+
+            @include desktop {
+              width: 30%;
+              margin-bottom: 1vw;
+            }
+
+            @include tablet {
+              width: 20%;
+              max-width: 3.5em;
+              margin-bottom: 10px;
+            }
+
+            @include phone {
+              width: 20%;
+              margin-bottom: 10px;
+            }
+            img {
+              width: 100%;
+            }
+          }
+
+          // Title
+          > span {
+            @include text;
+            font-weight: 300;
+          }
+
+          // Text
+          > p {
+            @include text;
+          }
+        }
+        @include desktop {
+          margin-bottom: 2vw;
+        }
+      }
+
+      a {
+        @include text;
+        @include link;
+      }
+    }
+
+    // Links
+    .links {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // Подробнее о нас
+      a:first-of-type {
+        @include text;
+        @include link;
+        width: 55%;
+      }
+
+      // Связаться
+      a:nth-of-type(2) {
+        @include button;
+        @include text;
+        width: 45%;
+      }
+
+      @include phone {
+        flex-direction: column;
+        width: 90%;
+
+        a {
+          width: 100%;
+          text-align: center;
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Мы ваши единомышленники
+  .card7 {
+    background-color: white;
+    padding: 100px 0;
+    @include desktop {
+      padding: 10vw 0;
+    }
+    > div {
+      @include container;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+          display: flex;
+          align-items: flex-start;
+
+          // Bullet point
+          > span {
+            display: block;
+            @include phone {
+              width: 8px;
+              margin-top: 0px;
+              margin-right: 2vw;
+            }
+            @include tablet {
+              width: 10px;
+              margin-top: 6px;
+              margin-right: 2vw;
+            }
+            @include desktop {
+              width: 10px;
+              margin-top: 0.3vw;
+              margin-right: 2vw;
+            }
+            img {
+              width: 100%;
+            }
+          }
+
+          > p {
+            width: 90%;
+            @include text;
+            margin: 0;
+            a {
+              @include link;
+            }
+          }
+
+          margin-bottom: 10px;
+        }
+      }
+
+      p {
+        @include text;
+        span {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
