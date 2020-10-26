@@ -3,7 +3,7 @@ import React from "react";
 
 // Children
 import Header from "../../components/Header";
-//import Infographic from "./Infographic";
+import Infographic from "./Infographic";
 
 // Styles
 import styles from "./index.module.scss";
@@ -12,6 +12,7 @@ const About = () => {
   return (
     <div className={styles.about}>
       <Header title="О нас" />
+      <Infographic/>
       <p>
         Наш проект формирует новый уход полного цикла за использованным
         текстилем и остатками текстильного производства:

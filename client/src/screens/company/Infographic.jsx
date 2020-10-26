@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 // Styles
 import styles from "./index.module.scss";
@@ -10,7 +10,6 @@ const Infographic = () => {
       <div>
         <img src={require("../../assets/infographic.svg")} alt="" />
       </div>
-      <Link to="process">Как мы работаем</Link>
     </div>
   );
 };
