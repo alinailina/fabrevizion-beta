@@ -28,6 +28,7 @@ const FAQs = () => {
   }, []);
 
   const faqs = [];
+  console.log(loading);
 
   // Filter faqs entries
   entries.filter((entry) =>

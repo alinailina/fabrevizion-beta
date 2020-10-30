@@ -158,14 +158,14 @@ const About = () => {
         <ul>
           <li>
             {" "}
-            <img src={require("../../assets/team_photos/2.jpg")} />{" "}
+            <img src={require("../../assets/team_photos/2.jpg")} alt='team'/>{" "}
             <p>
               Елена Туомикоски, фаундер. Вопросы партнерства и сотрудничества,
               <a href="mailto:elena@fabrevizion.ru">elena@fabrevizion.ru</a>
             </p>
           </li>
           <li>
-            <img src={require("../../assets/team_photos/1.jpg")} />{" "}
+            <img src={require("../../assets/team_photos/1.jpg")} alt='team'/>{" "}
             <p>
               Ярослав Фарушев, СEO,{" "}
               <a href="mailto:yaroslav.farushev@fabrevizion.ru">
@@ -175,7 +175,7 @@ const About = () => {
           </li>
           <li>
             {" "}
-            <img src={require("../../assets/team_photos/3.jpg")} />{" "}
+            <img src={require("../../assets/team_photos/3.jpg")} alt='team'/>{" "}
             <p>
               Ксения Попова, СОО,{" "}
               <a href="mailto:ksenia.popova@favrevizion.ru">
