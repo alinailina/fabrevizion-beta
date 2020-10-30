@@ -24,7 +24,7 @@
     }
   }
 
-  ul {
+  > ul {
     list-style-type: none;
     padding: 0;
     li {
@@ -72,10 +72,20 @@
     h3 {
       @include heading;
     }
-    p {
-      @include text;
-      a {
-        @include link;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 30%;
+        p {
+          @include text-s;
+          a {
+            @include link;
+          }
+        }
       }
     }
   }

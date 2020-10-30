@@ -54,7 +54,15 @@ const Navbar = () => {
             Магазин
           </NavLink>
         </li>
-
+        <li>
+          <NavLink
+            to="вопросыиответы"
+            onClick={toggleActive}
+            activeClassName="navlink-active"
+          >
+            Вопросы и ответы
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="события"

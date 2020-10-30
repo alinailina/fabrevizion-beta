@@ -41,6 +41,10 @@ body {
   background: linear-gradient(to top, $linen 40%, transparent 40%);
 }
 
+@mixin underline-green {
+  background: linear-gradient(to top, $green 20%, transparent 20%);
+}
+
 .highlight-linen {
   background: linear-gradient(to top, $linen 40%, transparent 40%);
 }
@@ -50,6 +54,10 @@ body {
 }
 
 .highlight-green {
+  background: linear-gradient(to top, $green 20%, transparent 20%);
+}
+
+.underline-green {
   background: linear-gradient(to top, $green 20%, transparent 20%);
 }
 
@@ -112,6 +120,19 @@ body {
 
 // Small text
 @mixin textS {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.1rem;
+  }
+
+  @include desktop {
+    font-size: 1.25vw;
+  }
+}
+
+@mixin text-s {
   font-size: 1rem;
   line-height: 1.5;
 
@@ -188,5 +209,48 @@ img {
   }
   @include desktop {
     margin-bottom: 5vw;
+  }
+}
+
+// Toggle indicator for accordion item (FAQ page)
+.toggle {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  position: relative;
+  outline: none;
+
+  span {
+    position: absolute;
+    transition: 0.3s;
+    background: $black;
+    border-radius: 1px;
+
+    &:first-of-type {
+      top: 32%;
+      bottom: 32%;
+      width: 1px;
+      left: 53%;
+    }
+
+    &:last-of-type {
+      left: 36%;
+      right: 27%;
+      height: 1px;
+      top: 48%;
+    }
+  }
+
+  &.active {
+    background-color: transparent;
+    span:first-of-type {
+      transform: rotate(90deg);
+    }
+
+    span:last-of-type {
+      transform: rotate(90deg);
+      left: 50%;
+      right: 50%;
+    }
   }
 }

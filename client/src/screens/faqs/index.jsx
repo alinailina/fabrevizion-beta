@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
-import SkeletonComponent from "./SkeletonComponent";
+
+// Children
+import Header from "../../components/Header";
+import Accordion from "./Accordion";
 
 // Styles
 import styles from "./index.module.scss";
 
-// Children
-import Header from "../../components/Header";
-import Filters from "./Filters";
-import BackToTop from "../../components/BackToTop";
-
-// Contentful delivery API
+// Contentful Delivery API
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: process.env.REACT_APP_SPACE,
   accessToken: process.env.REACT_APP_ACCESS_TOKEN,
 });
 
-const Blog = () => {
+const FAQs = () => {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -29,22 +27,21 @@ const Blog = () => {
     setLoading(false);
   }, []);
 
-  const posts = [];
+  const faqs = [];
 
-  // Filter blog entries
+  // Filter faqs entries
   entries.filter((entry) =>
-    entry.sys.contentType.sys.id === "blogPost" ? posts.push(entry) : null
+    entry.sys.contentType.sys.id === "faqs" ? faqs.push(entry) : null
   );
-  // console.log(posts);
+
+  console.log(faqs);
 
   return (
     <div className={styles.container}>
-      <Header title="Блог" />
-      {loading && <SkeletonComponent />}
-      {!loading && <Filters posts={posts} />}
-      <BackToTop />
+      <Header title="Вопросы и ответы" />
+      <Accordion faqs={faqs} />
     </div>
   );
 };
 
-export default Blog;
+export default FAQs;

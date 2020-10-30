@@ -12,7 +12,7 @@ const Filters = ({ posts }) => {
   const filter1 = () => {
     const results = [];
     posts.filter((post) =>
-      post.fields.type === "Истории" ? results.push(post) : null
+      post.fields.type === "Факты" ? results.push(post) : null
     );
     setFilteredPosts(results);
   };
@@ -36,7 +36,7 @@ const Filters = ({ posts }) => {
   const filter4 = () => {
     const results = [];
     posts.filter((post) =>
-      post.fields.type === "Разбор" ? results.push(post) : null
+      post.fields.type === "Практикум" ? results.push(post) : null
     );
     setFilteredPosts(results);
   };
@@ -44,11 +44,21 @@ const Filters = ({ posts }) => {
   return (
     <div className={styles.filters}>
       <ul>
-        <li onClick={() => setFilteredPosts(posts)}>Все статьи</li>
-        <li onClick={filter1}>Истории</li>
-        <li onClick={filter2}>Новости</li>
-        <li onClick={filter3}>Партнеры</li>
-        <li onClick={filter4}>Разбор</li>
+        <li onClick={() => setFilteredPosts(posts)}>
+          <button>Все статьи</button>
+        </li>
+        <li onClick={filter1}>
+          <button>Факты</button>
+        </li>
+        <li onClick={filter2}>
+          <button>Новости и события</button>
+        </li>
+        <li onClick={filter3}>
+          <button>Партнеры</button>
+        </li>
+        <li onClick={filter4}>
+          <button>Практикум</button>
+        </li>
       </ul>
       {filteredPosts.length ? (
         <Posts posts={filteredPosts} />

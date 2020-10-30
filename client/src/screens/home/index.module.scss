@@ -363,7 +363,7 @@
 
       p {
         @include text;
-        span {
+        .name {
           font-family: "Source Sans Pro", sans-serif;
           font-weight: 300;
           text-transform: uppercase;

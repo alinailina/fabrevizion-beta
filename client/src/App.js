@@ -19,6 +19,9 @@ import Shop from "./screens/shop";
 import ItemDetails from "./screens/shop/ItemDetails";
 
 // Events
+import FAQs from "./screens/faqs";
+
+// Events
 import Events from "./screens/events";
 
 // Blog
@@ -45,12 +48,15 @@ function App() {
         <Route path="/магазин" component={Shop} />
         <Route path="/item/:title" component={ItemDetails} />
 
+        {/* FAQs */}
+        <Route path="/вопросыиответы" component={FAQs} />
+
         {/* Events */}
         <Route path="/события" component={Events} />
 
         {/* Blog */}
         <Route path="/блог" component={Blog} />
-        <Route path="/post/:id" component={FullPost} />
+        <Route path="/post/:title" component={FullPost} />
 
         {/* Contact */}
         <Route path="/контакты" component={Contacts} />

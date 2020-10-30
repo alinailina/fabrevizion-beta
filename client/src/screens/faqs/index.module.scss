@@ -1,0 +1,74 @@
+@import "../../index.scss";
+
+.container {
+  @include container;
+
+  @include container;
+  margin-bottom: 150px;
+
+  @include phone {
+    margin-bottom: 100px;
+  }
+  @include desktop {
+    margin-bottom: 10vw;
+  }
+
+  // Accordion
+  .accordion {
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      // Question
+      .question {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 2px;
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-left: -10px;
+
+        // Text
+        h3 {
+          width: 90%;
+          @include text-s;
+          font-weight: 200;
+        }
+      }
+
+      // Answer
+      .answer {
+        overflow: hidden;
+        transition: all 0.5s ease;
+
+        h4 {
+          @include text;
+          font-weight: 300;
+          padding: 0px 10px;
+        }
+        h5 {
+          font-weight: 300;
+          color: green;
+        }
+        p {
+          @include text-s;
+          padding: 0px 10px;
+          b {
+            font-weight: 400;
+          }
+          a {
+            @include link;
+          }
+        }
+        a {
+          @include link;
+        }
+      }
+    }
+  }
+}

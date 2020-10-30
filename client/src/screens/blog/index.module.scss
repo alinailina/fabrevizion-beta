@@ -23,12 +23,24 @@
       margin-bottom: 50px;
 
       li {
-        @include small-text;
         padding: 1vw 2vw;
 
-        cursor: pointer;
-        &:hover {
-          color: $green;
+        button {
+          font-family: "Roboto Mono", monospace;
+          @include small-text;
+          font-weight: 200;
+          background-color: white;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            color: $green;
+          }
+
+          &:focus {
+            text-decoration: underline;
+            outline: none;
+          }
         }
       }
 
@@ -156,8 +168,9 @@
 
   .tags {
     p {
-      @include heading;
+      @include text-s;
       margin: 0;
+      background-color: $green;
     }
   }
 }

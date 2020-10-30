@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className={styles.about}>
       <Header title="О нас" />
-      <Infographic/>
+      <Infographic />
       <p>
         Наш проект формирует новый уход полного цикла за использованным
         текстилем и остатками текстильного производства:
@@ -155,20 +155,35 @@ const About = () => {
       </ul>
       <div>
         <h3>Наша команда:</h3>
-        <p>
-          Елена Туомикоски, фаундер. Вопросы партнерства и сотрудничества,
-          <a href="mailto:elena@fabrevizion.ru">elena@fabrevizion.ru</a>
-        </p>
-        <p>
-          Ярослав Фарушев, СEO,{" "}
-          <a href="mailto:yaroslav.farushev@fabrevizion.ru">
-            yaroslav.farushev@fabrevizion.ru
-          </a>
-        </p>
-        <p>
-          Ксения Попова, СОО,{" "}
-          <a href="mailto:ksenia.popova@favrevizion.ru">elena@fabrevizion.ru</a>
-        </p>
+        <ul>
+          <li>
+            {" "}
+            <img src={require("../../assets/team_photos/2.jpg")} />{" "}
+            <p>
+              Елена Туомикоски, фаундер. Вопросы партнерства и сотрудничества,
+              <a href="mailto:elena@fabrevizion.ru">elena@fabrevizion.ru</a>
+            </p>
+          </li>
+          <li>
+            <img src={require("../../assets/team_photos/1.jpg")} />{" "}
+            <p>
+              Ярослав Фарушев, СEO,{" "}
+              <a href="mailto:yaroslav.farushev@fabrevizion.ru">
+                yaroslav.farushev@fabrevizion.ru
+              </a>
+            </p>
+          </li>
+          <li>
+            {" "}
+            <img src={require("../../assets/team_photos/3.jpg")} />{" "}
+            <p>
+              Ксения Попова, СОО,{" "}
+              <a href="mailto:ksenia.popova@favrevizion.ru">
+                elena@fabrevizion.ru
+              </a>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
   );

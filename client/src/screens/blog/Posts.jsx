@@ -9,8 +9,8 @@ import styles from "./index.module.scss";
 const Posts = ({ posts }) => {
   return (
     <div className={styles.posts}>
-      {posts.map((post, index) => (
-        <Post key={index} post={post} i={index} />
+      {posts.map((post) => (
+        <Post key={post.fields.title} post={post} />
       ))}
       <i aria-hidden="true"></i>
     </div>
