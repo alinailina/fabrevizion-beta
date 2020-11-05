@@ -12,7 +12,7 @@
     margin: 4vw auto 8vw;
   }
 
-  // Main frame
+  // Main container
   section {
     display: flex;
     align-items: flex-start;
@@ -34,11 +34,9 @@
               color: $green;
             }
             text-decoration: none;
-            padding: 0 10px;
 
             &.active {
-              border-left: 1px solid $green;
-              font-weight: 300;
+              @include underline-green;
             }
           }
         }

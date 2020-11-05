@@ -30,7 +30,7 @@
 
     // Menu
     aside {
-      width: 25%;
+      width: 20%;
       ul {
         padding: 0;
         margin: 0;
@@ -45,11 +45,9 @@
               color: $green;
             }
             text-decoration: none;
-            padding: 0 10px;
 
             &.active {
-              border-left: 1px solid $green;
-              font-weight: 300;
+              @include underline-green;
             }
           }
         }

@@ -63,7 +63,7 @@ const Home = () => {
             <li>
               <div>
                 <img
-                  src={require("../../assets/arrow-reduce.svg")}
+                  src={require("../../assets/arr_reduce.svg")}
                   alt="reduce"
                 />
               </div>
@@ -73,7 +73,7 @@ const Home = () => {
             <li>
               <div>
                 <img
-                  src={require("../../assets/arrow-reuse.svg")}
+                  src={require("../../assets/arr_reuse.svg")}
                   alt="reuse"
                 />
               </div>
@@ -83,7 +83,7 @@ const Home = () => {
             <li>
               <div>
                 <img
-                  src={require("../../assets/arrow-recycle.svg")}
+                  src={require("../../assets/arr_recycle.svg")}
                   alt="recycle"
                 />
               </div>
@@ -93,7 +93,7 @@ const Home = () => {
             <li>
               <div>
                 <img
-                  src={require("../../assets/arrow-recover.svg")}
+                  src={require("../../assets/arr_recover.svg")}
                   alt="recover"
                 />
               </div>

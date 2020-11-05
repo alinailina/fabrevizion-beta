@@ -151,9 +151,8 @@
         }
 
         span {
-          @include heading;
-          border-left: 1px solid $green;
-          padding: 0 10px;
+          @include text;
+          @include underline-green;
         }
 
         p {

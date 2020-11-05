@@ -47,7 +47,7 @@ body {
 }
 
 @mixin underline-green {
-  background: linear-gradient(to top, $green 20%, transparent 20%);
+  background: linear-gradient(to top, $light-green 15%, transparent 15%);
 }
 
 .highlight-linen {
@@ -63,7 +63,7 @@ body {
 }
 
 .underline-green {
-  background: linear-gradient(to top, $light-green 20%, transparent 20%);
+  background: linear-gradient(to top, $light-green 15%, transparent 15%);
 }
 
 .highlight-brown {
