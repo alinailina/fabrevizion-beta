@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 
 // Home
 import Home from "./screens/home/index.jsx";
@@ -26,7 +27,6 @@ import Events from "./screens/events";
 
 // Blog
 import Blog from "./screens/blog";
-import FullPost from "./screens/blog/FullPost";
 
 // Contact
 import Contacts from "./screens/contacts";
@@ -46,7 +46,7 @@ function App() {
 
         {/* Shop */}
         <Route path="/магазин" component={Shop} />
-        <Route path="/item/:title" component={ItemDetails} />
+        {/* <Route path="/item/:title" component={ItemDetails} /> */}
 
         {/* FAQs */}
         <Route path="/вопросыиответы" component={FAQs} />
@@ -56,11 +56,11 @@ function App() {
 
         {/* Blog */}
         <Route path="/блог" component={Blog} />
-        <Route path="/post/:title" component={FullPost} />
 
         {/* Contact */}
         <Route path="/контакты" component={Contacts} />
       </Switch>
+      <BackToTop />
       <Footer />
     </Router>
   );

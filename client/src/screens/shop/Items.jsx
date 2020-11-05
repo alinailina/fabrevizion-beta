@@ -6,9 +6,9 @@ import Item from "./Item";
 // Styles
 import styles from "./index.module.scss";
 
-const List = ({ shopItems }) => {
+const Items = ({ shopItems }) => {
   return (
-    <div className={styles.list}>
+    <div className={styles.items}>
       {shopItems
         .slice(0)
         .reverse()
@@ -21,4 +21,4 @@ const List = ({ shopItems }) => {
   );
 };
 
-export default List;
+export default Items;

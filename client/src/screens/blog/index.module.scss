@@ -2,54 +2,61 @@
 
 .container {
   @include container;
-  margin-bottom: 100px;
-
   @include phone {
-    margin-bottom: 50px;
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
   }
   @include desktop {
-    margin-bottom: 10vw;
+    margin: 4vw auto 8vw;
   }
 
-  // Filters
-  .filters {
-    ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 50px;
+  // Main frame
+  section {
+    display: flex;
+    align-items: flex-start;
 
-      li {
-        padding: 1vw 2vw;
+    // Menu
+    aside {
+      width: 20%;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+          margin-bottom: 10px;
+          a {
+            @include text-xs;
+            font-weight: 100;
+            color: $black;
+            &:hover {
+              color: $green;
+            }
+            text-decoration: none;
+            padding: 0 10px;
 
-        button {
-          font-family: "Roboto Mono", monospace;
-          @include small-text;
-          font-weight: 200;
-          background-color: white;
-          border: none;
-          cursor: pointer;
-
-          &:hover {
-            color: $green;
-          }
-
-          &:focus {
-            text-decoration: underline;
-            outline: none;
+            &.active {
+              border-left: 1px solid $green;
+              font-weight: 300;
+            }
           }
         }
       }
+    }
 
-      @include phone {
-        justify-content: flex-start;
-        li {
-          padding: 2vw 0;
-          padding-right: 5vw;
-        }
+    main {
+      width: 75%;
+    }
+
+    @media only screen and (max-width: 550px) {
+      flex-direction: column;
+      aside {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      main {
+        width: 100%;
       }
     }
   }
@@ -67,49 +74,47 @@
         width: 100%;
         margin-bottom: 25px;
       }
-
       @media only screen and (min-width: 550px) {
         width: 49%;
         margin-bottom: 25px;
       }
-
-      @include tablet {
-        width: 31%;
-        margin-bottom: 50px;
+      @media only screen and (min-width: 769px) and (max-width: 999px) {
+        width: 49%;
+        margin-bottom: 2vw;
       }
-
+      @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+        width: 31%;
+        margin-bottom: 2vw;
+      }
       @include desktop {
         width: 31%;
         margin-bottom: 2vw;
       }
 
+      // Date & category
       > p {
         @include text;
-        // Date + post type
+        margin: 0;
         &:first-of-type,
         &:nth-of-type(2) {
-          @include small-text;
+          @include text-xs;
+          font-weight: 300;
         }
+        display: flex;
+        justify-content: space-between;
       }
 
       // Img
       img {
         width: 100%;
+        margin: 1vw 0;
       }
 
       // Title
       h3 {
         @include text;
         font-weight: 300;
-      }
-
-      // Tags
-      > div {
-        p {
-          @include small-text;
-          margin: 0;
-        }
-        margin-bottom: 25px;
+        margin: 0;
       }
     }
   }

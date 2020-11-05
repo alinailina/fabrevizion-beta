@@ -1,30 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { BsPlusCircle } from "react-icons/bs";
 
 const Item = ({ item }) => {
   const { title, images } = item.fields;
 
-  const img1 = images[0].fields.file.url;
-  const img2 = images[1].fields.file.url;
-  const [img, setImg] = useState(img1);
+  const img = images[0].fields.file.url;
+  //const img2 = images[1].fields.file.url;
 
   return (
     <div>
-      <Link to={{ pathname: `/item/${title}`, state: { item: item } }}>
-        <img
-          src={img}
-          onMouseEnter={() => {
-            setImg(img2);
-          }}
-          onMouseOut={() => {
-            setImg(img1);
-          }}
-          alt="shopping-item"
-        />
+      <Link>
+        <img src={img} alt="shopping-item" />
       </Link>
       <div>
         <p>{title}</p>
-        <p>12345 руб.</p>
       </div>
     </div>
   );

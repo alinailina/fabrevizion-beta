@@ -63,7 +63,7 @@ const Navbar = () => {
             Вопросы и ответы
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="события"
             onClick={toggleActive}
@@ -71,7 +71,7 @@ const Navbar = () => {
           >
             События
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="блог"

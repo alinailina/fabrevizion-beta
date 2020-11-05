@@ -13,7 +13,9 @@ const FullPost = (props) => {
   const post = props.location.state.post;
   console.log(post);
 
-  const { date, type, title, tags, bodyText } = post.fields;
+  let { path, url } = useRouteMatch();
+
+  const { date, type, title, bodyText } = post.fields;
 
   // Img + description
   const { file, description } = post.fields.heroImage.fields;
@@ -39,11 +41,6 @@ const FullPost = (props) => {
           __html: stringText,
         }}
       ></div>
-      <div className={styles.tags}>
-        {tags.length
-          ? tags.map((tag, index) => <p key={index}>#{tag}</p>)
-          : null}
-      </div>
     </div>
   );
 };

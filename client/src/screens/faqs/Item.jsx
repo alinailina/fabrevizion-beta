@@ -10,22 +10,14 @@ const Item = ({ faq }) => {
   const questionRef = useRef(null);
 
   const { question, answer } = faq.fields;
-  console.log(question);
   const stringText = documentToHtmlString(answer);
 
   useEffect(() => {
     answerRef.current.style.maxHeight = active
       ? `${answerRef.current.scrollHeight}px`
       : "0px";
-    answerRef.current.style.padding = active ? "0 0 25px" : "0";
-    answerRef.current.style.marginBottom = active ? "25px" : "0";
-  }, [active]);
-
-  useEffect(() => {
-    questionRef.current.style.backgroundColor = active
-      ? "rgb(250, 240, 230)"
-      : "white";
-    questionRef.current.style.border = active ? "none" : "1px solid #2d2d2d";
+    questionRef.current.style.borderBottom = active ? "none" : "";
+    questionRef.current.style.color = active ? "#a7c957" : "black";
   }, [active]);
 
   const toogleActive = () => {

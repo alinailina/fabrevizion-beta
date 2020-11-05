@@ -4,13 +4,13 @@
   // Hero
   .card1 {
     // Parallax
-    background-image: url("../../assets/sheets.jpg");
+    background-image: url("../../assets/6.JPG");
     background-color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 75vh;
     @include phone {
       min-height: 90vh;
       background-attachment: scroll;
@@ -47,12 +47,16 @@
           }
 
           @include desktop {
-            font-size: 8vw;
+            font-size: 6vw;
           }
 
-          margin: 0 1vw;
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 200;
+          margin: 0;
+          margin-bottom: -20px;
+          font-weight: 300;
+
+          span {
+            color: #4f772d;
+          }
           text-transform: uppercase;
           @include phone {
             margin-top: 10vw;
@@ -76,7 +80,7 @@
           a:first-of-type {
             @include button;
             width: 45%;
-            background-color: transparent;
+            background-color: $linen;
             &:hover {
               background-color: $green;
             }
@@ -110,9 +114,9 @@
   .card2,
   .card4 {
     background-color: $linen;
-    padding: 100px 0;
+    padding: 50px 0;
     @include desktop {
-      padding: 10vw 0;
+      padding: 5vw 0;
     }
     text-align: center;
 
@@ -140,15 +144,16 @@
   // Img
   .card3 {
     // Parallax
-    background-image: url("../../assets/bg1.svg");
+    background-image: url("../../assets/bg1-1.svg");
     background-color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 60vh;
+    height: 30vh;
     @include phone {
       background-attachment: scroll;
+      height: 20vh;
     }
     position: relative;
 
@@ -166,9 +171,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 60vh;
+    min-height: 40vh;
     @include phone {
       background-attachment: scroll;
+      min-height: 20vh;
     }
     position: relative;
 
@@ -183,9 +189,9 @@
 
     > div {
       @include container;
-      padding: 100px 0;
+      padding: 50px 0;
       @include desktop {
-        padding: 10vw 0;
+        padding: 5vw 0;
       }
       text-align: center;
 
@@ -220,7 +226,8 @@
           @include phone {
             width: 45%;
           }
-          margin-bottom: 50px;
+          margin-bottom: 25px;
+
           @include desktop {
             margin-bottom: 0px;
           }
@@ -311,9 +318,9 @@
   // Мы ваши единомышленники
   .card7 {
     background-color: white;
-    padding: 100px 0;
+    padding: 50px 0;
     @include desktop {
-      padding: 10vw 0;
+      padding: 5vw 0;
     }
     > div {
       @include container;
@@ -323,11 +330,13 @@
         padding: 0;
         li {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
+          justify-content: flex-start;
 
           // Bullet point
           > span {
             display: block;
+            border: 1px solid;
             @include phone {
               width: 8px;
               margin-top: 0px;
@@ -363,6 +372,7 @@
 
       p {
         @include text;
+        text-align: center;
         .name {
           font-family: "Source Sans Pro", sans-serif;
           font-weight: 300;

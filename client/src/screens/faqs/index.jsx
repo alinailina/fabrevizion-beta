@@ -18,7 +18,9 @@ const FAQs = () => {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Get all entries
   useEffect(() => {
+    console.log(loading);
     setLoading(true);
     client
       .getEntries()
@@ -27,20 +29,18 @@ const FAQs = () => {
     setLoading(false);
   }, []);
 
+  // Filter faqs
   const faqs = [];
-  console.log(loading);
-
-  // Filter faqs entries
   entries.filter((entry) =>
     entry.sys.contentType.sys.id === "faqs" ? faqs.push(entry) : null
   );
 
-  console.log(faqs);
-
   return (
-    <div className={styles.container}>
-      <Header title="Вопросы и ответы" />
-      <Accordion faqs={faqs} />
+    <div>
+      <Header title="Вопросы и ответы" />{" "}
+      <div className={styles.container}>
+        <Accordion faqs={faqs} />
+      </div>
     </div>
   );
 };

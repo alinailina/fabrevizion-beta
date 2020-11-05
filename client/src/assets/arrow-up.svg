@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="908" height="908" viewBox="0 0 908 908">
-  <g id="Group_180" data-name="Group 180" transform="translate(-8969 5815)">
-    <rect id="Rectangle_24" data-name="Rectangle 24" width="908" height="908" rx="454" transform="translate(8969 -5815)" fill="#a7c957"/>
-    <g id="arrow-up" transform="translate(9220.158 -5617.04)">
-      <path id="Path_940" data-name="Path 940" d="M263.432,3.136a10.667,10.667,0,0,0-15.085-.019l-.019.019-192,192A10.667,10.667,0,0,0,71.41,210.219l173.8-173.8V501.333a10.667,10.667,0,0,0,21.334,0V36.416L440.328,210.2a10.667,10.667,0,0,0,15.345-14.821c-.086-.089-.173-.176-.262-.262Z" transform="translate(-53.334)" fill="#4caf50"/>
-      <path id="Path_941" data-name="Path 941" d="M447.88,213.333a10.663,10.663,0,0,1-7.552-3.115L255.88,25.749,71.432,210.219a10.667,10.667,0,0,1-15.083-15.082l192-192a10.667,10.667,0,0,1,15.083,0l192,192a10.665,10.665,0,0,1-7.552,18.2Z" transform="translate(-53.334)"/>
-      <path id="Path_942" data-name="Path 942" d="M255.88,512a10.667,10.667,0,0,1-10.667-10.667V10.667a10.667,10.667,0,1,1,21.334,0V501.334A10.668,10.668,0,0,1,255.88,512Z" transform="translate(-53.334)"/>
+  <g id="Group_216" data-name="Group 216" transform="translate(-7827 5063)">
+    <rect id="Rectangle_24" data-name="Rectangle 24" width="908" height="908" rx="454" transform="translate(7827 -5063)" fill="none"/>
+    <g id="arrow-up" transform="translate(8078.158 -4865.04)">
+      <path id="Path_940" data-name="Path 940" d="M263.432,3.136a10.667,10.667,0,0,0-15.085-.019l-.019.019-192,192A10.667,10.667,0,0,0,71.41,210.219l173.8-173.8V501.333a10.667,10.667,0,0,0,21.334,0V36.416L440.328,210.2a10.667,10.667,0,0,0,15.345-14.821c-.086-.089-.173-.176-.262-.262Z" transform="translate(-53.334)" fill="#4caf50" stroke="#707070" stroke-width="1"/>
+      <path id="Path_941" data-name="Path 941" d="M447.88,213.333a10.663,10.663,0,0,1-7.552-3.115L255.88,25.749,71.432,210.219a10.667,10.667,0,0,1-15.083-15.082l192-192a10.667,10.667,0,0,1,15.083,0l192,192a10.665,10.665,0,0,1-7.552,18.2Z" transform="translate(-53.334)" stroke="#707070" stroke-width="1"/>
+      <path id="Path_942" data-name="Path 942" d="M255.88,512a10.667,10.667,0,0,1-10.667-10.667V10.667a10.667,10.667,0,1,1,21.334,0V501.334A10.668,10.668,0,0,1,255.88,512Z" transform="translate(-53.334)" stroke="#707070" stroke-width="1"/>
     </g>
   </g>
 </svg>

@@ -2,15 +2,14 @@
 
 .container {
   @include container;
-
-  @include container;
-  margin-bottom: 150px;
-
   @include phone {
-    margin-bottom: 100px;
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
   }
   @include desktop {
-    margin-bottom: 10vw;
+    margin: 4vw auto 8vw;
   }
 
   // Accordion
@@ -25,20 +24,25 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        border-radius: 2px;
         padding: 0px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         margin-left: -10px;
+        border-bottom: 1px solid $green;
 
         // Text
         h3 {
           width: 90%;
-          @include text-s;
-          font-weight: 200;
+          @include text;
+          font-weight: 300;
+          &:hover {
+            color: $green;
+          }
         }
+        // Toggle
+        // find code in main index.scss
       }
 
       // Answer

@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 // Styles
 import styles from "./index.module.scss";
 
-import BackToTop from "../../components/BackToTop";
-
 const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card1}>
         <div className={styles.innerCard1}>
           <div>
-            <h1>Fabrevizion</h1>
+            <h1>
+              Fab<span>Re</span>
+              vizion
+            </h1>
             <p>Новый взгляд на уход за текстилем</p>
             <div>
               <Link to="/компания">Подробнее о нас</Link>
@@ -162,7 +163,6 @@ const Home = () => {
             .{" "}
           </p>{" "}
           <p>Только вместе сделаем мир лучше!</p>
-          <BackToTop />
         </div>
       </div>
     </div>

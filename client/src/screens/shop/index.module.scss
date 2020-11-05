@@ -2,21 +2,78 @@
 
 .container {
   @include container;
+  @include phone {
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
+  }
+  @include desktop {
+    margin: 4vw auto 8vw;
+  }
 
   // Text
-  section {
-    @include margin-bottom;
+  > div:first-of-type {
+    margin-bottom: 3vw;
     p {
       @include text;
-
       a {
         @include link;
       }
     }
   }
 
-  // List
-  .list {
+  // Main container
+  section {
+    display: flex;
+    align-items: flex-start;
+
+    // Menu
+    aside {
+      width: 25%;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+          margin-bottom: 10px;
+          a {
+            @include text-xs;
+            font-weight: 100;
+            color: $black;
+            &:hover {
+              color: $green;
+            }
+            text-decoration: none;
+            padding: 0 10px;
+
+            &.active {
+              border-left: 1px solid $green;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      width: 75%;
+    }
+
+    @media only screen and (max-width: 550px) {
+      flex-direction: column;
+      aside {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      main {
+        width: 100%;
+      }
+    }
+  }
+
+  // Items
+  .items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -24,189 +81,190 @@
     // Item
     > div,
     i {
-      width: 30%;
-
-      @include phone {
-        width: 45%;
-      }
-
-      @include tablet {
-        width: 30%;
-      }
-
-      @include margin-bottom;
-
-      > div {
-        margin-bottom: 15px;
-
-        p {
-          padding: 0;
-          margin: 5px 0;
-          @include small-text;
-          span {
-            img {
-              width: 75px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Slider
-  .slider {
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-
-    // Slide
-    > div {
-      min-width: 100%;
-      transition: 0.5s;
-    }
-
-    // Arrows
-    span {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-
-      @include desktop {
-        font-size: 3vw;
-      }
-
-      &:first-of-type {
-        left: 0;
-        padding: 5px 5px 0 0;
-      }
-
-      &:nth-of-type(2) {
-        right: 0;
-        padding: 5px 0 0 5px;
-      }
-
-      color: $black;
-
-      cursor: pointer;
-      border: 1px solid;
-      border-radius: 1px;
-    }
-  }
-}
-
-// Item details
-.itemDetails {
-  @include container;
-  @include phone {
-    margin-top: 150px;
-    margin-bottom: 100px;
-  }
-
-  @include tablet {
-    margin-top: 125px;
-    margin-bottom: 150px;
-  }
-
-  @include desktop {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-  }
-
-  display: flex;
-  justify-content: space-between;
-
-  // Img
-  > div:first-of-type {
-    width: 40%;
-
-    .mobileTitle {
-      display: flex;
-      align-items: center;
-      h1 {
-        @include heading;
-        font-weight: 300;
-        margin: 0;
-      }
-      div {
-        width: 10%;
-        img {
-          width: 100%;
-        }
-      }
-      display: none;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
-  // Info
-  > div:nth-of-type(2) {
-    width: 55%;
-
-    // Title
-    div:first-of-type {
-      display: flex;
-      align-items: center;
-      h1 {
-        @include heading;
-        font-weight: 300;
-        margin: 0;
-      }
-      div {
-        width: 10%;
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    // Description
-    p {
-      @include text;
-    }
-
-    // Link
-    div:nth-of-type(2) {
-      width: 50%;
-      margin: 25px 0 0;
-      a:first-of-type {
-        @include button;
-        margin-bottom: 25px;
-      }
-      a:nth-of-type(2) {
-        @include text;
-        @include link;
-      }
-    }
-  }
-
-  @include phone {
-    flex-direction: column;
-    // Img
-    > div:first-of-type {
-      .mobileTitle {
-        display: flex;
-        margin-bottom: 25px;
-      }
-      width: 100%;
-    }
-    // Info
-    > div:nth-of-type(2) {
-      width: 100%;
-
-      // Title
-      h1 {
-        display: none;
-      }
-
-      // Link
-      > div {
+      @media only screen and (max-width: 550px) {
         width: 100%;
+        margin-bottom: 25px;
+      }
+      @media only screen and (min-width: 550px) {
+        width: 49%;
+        margin-bottom: 25px;
+      }
+      @media only screen and (min-width: 769px) and (max-width: 999px) {
+        width: 49%;
+        margin-bottom: 2vw;
+      }
+      @media only screen and (min-width: 1000px) and (max-width: 1200px) {
+        width: 31%;
+        margin-bottom: 2vw;
+      }
+      @include desktop {
+        width: 31%;
+        margin-bottom: 2vw;
+      }
+      > div {
+        p {
+          @include text-xs;
+          font-weight: 300;
+          text-align: center;
+        }
       }
     }
   }
+
+  // // Slider
+  // .slider {
+  //   display: flex;
+  //   align-items: center;
+  //   position: relative;
+  //   overflow: hidden;
+
+  //   // Slide
+  //   > div {
+  //     min-width: 100%;
+  //     transition: 0.5s;
+  //   }
+
+  //   // Arrows
+  //   span {
+  //     position: absolute;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     font-size: 2rem;
+
+  //     @include desktop {
+  //       font-size: 3vw;
+  //     }
+
+  //     &:first-of-type {
+  //       left: 0;
+  //       padding: 5px 5px 0 0;
+  //     }
+
+  //     &:nth-of-type(2) {
+  //       right: 0;
+  //       padding: 5px 0 0 5px;
+  //     }
+
+  //     color: $black;
+
+  //     cursor: pointer;
+  //     border: 1px solid;
+  //     border-radius: 1px;
+  //   }
+  // }
 }
+
+// // Item details
+// .itemDetails {
+//   @include container;
+//   @include phone {
+//     margin-top: 150px;
+//     margin-bottom: 100px;
+//   }
+
+//   @include tablet {
+//     margin-top: 125px;
+//     margin-bottom: 150px;
+//   }
+
+//   @include desktop {
+//     margin-top: 10vw;
+//     margin-bottom: 10vw;
+//   }
+
+//   display: flex;
+//   justify-content: space-between;
+
+//   // Img
+//   > div:first-of-type {
+//     width: 40%;
+
+//     .mobileTitle {
+//       display: flex;
+//       align-items: center;
+//       h1 {
+//         @include heading;
+//         font-weight: 300;
+//         margin: 0;
+//       }
+//       div {
+//         width: 10%;
+//         img {
+//           width: 100%;
+//         }
+//       }
+//       display: none;
+//     }
+
+//     img {
+//       width: 100%;
+//     }
+//   }
+
+//   // Info
+//   > div:nth-of-type(2) {
+//     width: 55%;
+
+//     // Title
+//     div:first-of-type {
+//       display: flex;
+//       align-items: center;
+//       h1 {
+//         @include heading;
+//         font-weight: 300;
+//         margin: 0;
+//       }
+//       div {
+//         width: 10%;
+//         img {
+//           width: 100%;
+//         }
+//       }
+//     }
+
+//     // Description
+//     p {
+//       @include text;
+//     }
+
+//     // Link
+//     div:nth-of-type(2) {
+//       width: 50%;
+//       margin: 25px 0 0;
+//       a:first-of-type {
+//         @include button;
+//         margin-bottom: 25px;
+//       }
+//       a:nth-of-type(2) {
+//         @include text;
+//         @include link;
+//       }
+//     }
+//   }
+
+//   @include phone {
+//     flex-direction: column;
+//     // Img
+//     > div:first-of-type {
+//       .mobileTitle {
+//         display: flex;
+//         margin-bottom: 25px;
+//       }
+//       width: 100%;
+//     }
+//     // Info
+//     > div:nth-of-type(2) {
+//       width: 100%;
+
+//       // Title
+//       h1 {
+//         display: none;
+//       }
+
+//       // Link
+//       > div {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SkeletonComponent from "./Skeleton";
+import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
 
 // Children
 import Header from "../../components/Header";
-import List from "./List";
+import Items from "./Items";
 
 // Styles
 import styles from "./index.module.scss";
@@ -18,8 +18,12 @@ const client = contentful.createClient({
 const Shop = () => {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [filteredItems, setFilteredItems] = useState([]);
+  let { path, url } = useRouteMatch();
 
+  // Get all entries
   useEffect(() => {
+    console.log(loading);
     setLoading(true);
     client
       .getEntries()
@@ -34,20 +38,100 @@ const Shop = () => {
     entry.sys.contentType.sys.id === "shopItem" ? shopItems.push(entry) : null
   );
 
+  // Filter by category
+  const filter1 = () => {
+    const results = [];
+    shopItems.filter((item) =>
+      item.fields.category === "Униформа" ? results.push(item) : null
+    );
+    setFilteredItems(results);
+    console.log(results);
+  };
+  const filter2 = () => {
+    const results = [];
+    shopItems.filter((item) =>
+      item.fields.category === "PW" ? results.push(item) : null
+    );
+    setFilteredItems(results);
+    console.log(results);
+  };
+  const filter3 = () => {
+    const results = [];
+    shopItems.filter((item) =>
+      item.fields.category === "Аксессуары" ? results.push(item) : null
+    );
+    setFilteredItems(results);
+    console.log(results);
+  };
+
   return (
-    <div className={styles.container}>
+    <div>
       <Header title="Магазин" />
-      <section>
-        <p>
-          Наш магазин готовится к запуску в он-лайн режиме. Если вы хотите
-          купить или заказать готовые изделия из вторичного текстиля,
-          представленные в галерее ниже, пишите и звоните сюда
-          -------------------.
-        </p>
-        <p>Мы всегда рады помочь вам! </p>
-      </section>
-      {loading && <SkeletonComponent />}
-      {!loading && <List shopItems={shopItems} />}
+      <div className={styles.container}>
+        <div>
+          <p>
+            Наш магазин готовится к запуску в он-лайн режиме. Если вы хотите
+            купить или заказать готовые изделия из вторичного текстиля,
+            представленные в галерее ниже, пишите и звоните нам. Мы всегда рады
+            вам помочь!
+          </p>
+        </div>
+        <section>
+          <aside>
+            <ul>
+              <li>
+                <NavLink to={`${url}`} exact activeClassName={styles.active}>
+                  Все товары
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`${url}/униформа`}
+                  exact
+                  activeClassName={styles.active}
+                  onClick={filter1}
+                >
+                  Униформа
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`${url}/тканиpw`}
+                  exact
+                  activeClassName={styles.active}
+                  onClick={filter2}
+                >
+                  Каталог тканей PW
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={`${url}/аксессуары`}
+                  exact
+                  activeClassName={styles.active}
+                  onClick={filter3}
+                >
+                  Аксессуары
+                </NavLink>
+              </li>
+            </ul>
+          </aside>
+          <main>
+            <Switch>
+              <Route exact path={path}>
+                <Items shopItems={shopItems} />
+              </Route>
+              <Route path={`${path}/:category`}>
+                {filteredItems.length ? (
+                  <Items shopItems={filteredItems} />
+                ) : (
+                  <p>В данном разделе нет товаров.</p>
+                )}
+              </Route>
+            </Switch>
+          </main>
+        </section>
+      </div>
     </div>
   );
 };
