@@ -18,7 +18,6 @@ import Principles from "./screens/company/Principles";
 // Shop
 import Shop from "./screens/shop";
 
-
 // Events
 import FAQs from "./screens/faqs";
 

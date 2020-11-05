@@ -23,7 +23,6 @@ const Shop = () => {
 
   // Get all entries
   useEffect(() => {
- 
     setLoading(true);
     client
       .getEntries()

@@ -1,10 +1,8 @@
 import React from "react";
 
-
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 
 import { SiInstagram } from "react-icons/si";
-
 
 // Styles
 import "./index.scss";
@@ -34,20 +32,19 @@ const Footer = () => {
           </ul>
         </aside>
         <div>
-        <p>Подпишитесь на нашу рассылку</p>
+          <p>Подпишитесь на нашу рассылку</p>
           <form>
-              <label>
-                <input type="email" />
-                <p>Адрес вашей электронной почты</p>
-              </label>
-              <div><input type="submit" value="Подписаться" /></div>
-              
+            <label>
+              <input type="email" />
+              <p>Адрес вашей электронной почты</p>
+            </label>
+            <div>
+              <input type="submit" value="Подписаться" />
+            </div>
           </form>
         </div>
       </div>
-      <p className="copyright">
-        © Fabrevizion, 2020.
-      </p>
+      <p className="copyright">© Fabrevizion, 2020.</p>
     </footer>
   );
 };

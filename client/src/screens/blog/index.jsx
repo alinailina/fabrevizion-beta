@@ -23,7 +23,6 @@ const Blog = () => {
 
   // Get all entries
   useEffect(() => {
-    
     setLoading(true);
     client
       .getEntries()

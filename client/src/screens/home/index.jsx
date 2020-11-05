@@ -112,33 +112,15 @@ const Home = () => {
           <p>Мы ваши единомышленники, союзники и надежные партнеры, если</p>
           <ul>
             <li>
-              <span>
-                <img
-                  src={require("../../assets/bullet-point.svg")}
-                  alt="bullet-point"
-                />
-              </span>
               <p>вы заинтересованы в более экологичных продуктах и услугах,</p>
             </li>
             <li>
-              <span>
-                <img
-                  src={require("../../assets/bullet-point.svg")}
-                  alt="bullet-point"
-                />
-              </span>
               <p>
                 вы стремитесь улучшить социальные и экологические показатели
                 вашей компании,
               </p>
             </li>
             <li>
-              <span>
-                <img
-                  src={require("../../assets/bullet-point.svg")}
-                  alt="bullet-point"
-                />
-              </span>
               <p>
                 вы поставили перед собой задачи по реальному достижению{" "}
                 <a

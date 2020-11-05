@@ -158,7 +158,7 @@ const About = () => {
           </li>
         </ul>
         <div>
-          <Header title="Наша команда" />
+          <h3>Наша команда</h3>
 
           <ul>
             <li>
