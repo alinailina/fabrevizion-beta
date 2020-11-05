@@ -4,7 +4,7 @@
   // Hero
   .card1 {
     // Parallax
-    background-image: url("../../assets/6.JPG");
+    background-image: url("../../assets/8.JPG");
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.1);
       width: 100%;
 
       > div {
@@ -55,9 +55,9 @@
           font-weight: 300;
 
           span {
-            color: #4f772d;
+            color: $green;
           }
-          text-transform: uppercase;
+
           @include phone {
             margin-top: 10vw;
           }
