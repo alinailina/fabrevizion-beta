@@ -168,32 +168,21 @@
 // Наши принципы
 .principles {
   @include container;
-  margin-bottom: 150px;
-
   @include phone {
-    margin-bottom: 100px;
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
   }
   @include desktop {
-    margin-bottom: 10vw;
-  }
-
-  // Graphic
-  > div:first-of-type {
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    @include desktop {
-      margin-bottom: 2.5vw;
-    }
+    margin: 4vw auto 8vw;
   }
 
   p {
     @include text;
-    .name {
-      font-family: "Lato", sans-serif;
+    span {
       font-weight: 300;
     }
-
     a {
       @include link;
     }
@@ -203,25 +192,22 @@
   > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 0;
-    @include phone {
-      padding: 50px 0 25px;
-    }
-    @include tablet {
-      padding: 50px 0 25px;
+    justify-content: space-around;
+    padding: 25px 0;
+    @include desktop {
+      padding: 2vw 0;
     }
 
     // Icon
-    > div {
+    > div,
+    i {
       @include phone {
-        width: 45%;
-        margin-bottom: 25px;
+        width: 30%;
+        max-width: 10em;
       }
 
       @include tablet {
-        width: 31%;
-        margin-bottom: 25px;
+        width: 15%;
       }
 
       @include desktop {
@@ -231,7 +217,6 @@
       overflow: hidden;
       img {
         width: 100%;
-        filter: grayscale(100%);
       }
     }
   }

@@ -180,6 +180,7 @@ body {
 @mixin link {
   text-decoration: none;
   color: #6a994e;
+  font-weight: 300;
 
   &:hover {
     color: $black;

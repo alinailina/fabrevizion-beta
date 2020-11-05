@@ -8,11 +8,9 @@ const Principles = () => {
     <div>
       <Header title="Наши принципы " />
       <div className={styles.principles}>
-        <div>
-          <img src={require("../../assets/process_step5.svg")} alt="" />
-        </div>
         <p>
-          Цель проекта <span className={styles.name}>FABREVIZION</span> &mdash;
+          Цель проекта <span> FABREVIZION </span>
+          &mdash;
           чтобы наши клиенты, связанные с производством и эксплуатацией
           текстильной продукции, получили инновационные экологичные решения по
           уходу за использованным текстилем и остатками текстильного
@@ -60,6 +58,9 @@ const Principles = () => {
           <div>
             <img src={require("../../assets/цур/17.png")} alt="" />
           </div>
+          <i aria-hidden="true"></i>
+          <i aria-hidden="true"></i>
+          
         </div>
         <p>
           Если вы разделяете наши ценности бережного отношения к окружающей
