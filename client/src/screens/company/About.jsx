@@ -7,6 +7,7 @@ import Infographic from "./Infographic";
 
 // Styles
 import styles from "./index.module.scss";
+import Team from "./Team";
 
 const About = () => {
   return (
@@ -157,41 +158,9 @@ const About = () => {
             </p>
           </li>
         </ul>
-        <div>
-          <h3>Наша команда</h3>
-
-          <ul>
-            <li>
-              <img src={require("../../assets/team_photos/2.png")} alt="team" />
-              <div>
-                <p>Елена Туомикоски</p>
-                <p>фаундер, вопросы партнерства и сотрудничества </p>
-                <a href="mailto:elena@fabrevizion.ru">elena@fabrevizion.ru</a>
-              </div>
-            </li>
-            <li>
-              <img src={require("../../assets/team_photos/1.jpg")} alt="team" />{" "}
-              <div>
-                <p>Ярослав Фарушев</p>
-                <p>СEO </p>
-                <a href="mailto:yaroslav.farushev@fabrevizion.ru">
-                  yaroslav.farushev@fabrevizion.ru
-                </a>
-              </div>
-            </li>
-            <li>
-              <img src={require("../../assets/team_photos/3.jpg")} alt="team" />{" "}
-              <div>
-                <p> Ксения Попова</p>
-                <p>СОО</p>
-                <a href="mailto:ksenia.popova@favrevizion.ru">
-                  elena@fabrevizion.ru
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
+    
       </div>
+<Team/>
     </div>
   );
 };

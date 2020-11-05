@@ -3,13 +3,14 @@
 // О нас
 .about {
   @include container;
-  margin-bottom: 150px;
-
   @include phone {
-    margin-bottom: 100px;
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
   }
   @include desktop {
-    margin-bottom: 10vw;
+    margin: 4vw auto 8vw;
   }
 
   > p {
@@ -29,7 +30,6 @@
     padding: 0;
     li {
       display: flex;
-
       align-items: flex-start;
 
       // Bullet point
@@ -69,7 +69,13 @@
   }
 
   // Наша команда
-  > div:last-of-type {
+  .team {
+    background-color: linen;
+    padding: 25px 0 0;
+    h3 {
+      @include heading;
+      text-align: center;
+    }
     ul {
       list-style-type: none;
       padding: 0;
@@ -78,15 +84,14 @@
       justify-content: space-between;
       li {
         width: 30%;
+        max-width: 15em;
+
         @include phone {
           width: 50%;
-          margin: 0 auto;
-          margin-bottom: 25px;
         }
 
         @include tablet {
           width: 45%;
-          margin-bottom: 25px;
         }
 
         > div {
@@ -103,6 +108,62 @@
   }
 }
 
+// Наша команда
+.team {
+  background-color: $gray;
+  padding: 25px 0;
+  @include desktop {
+    padding: 2vw 0;
+  }
+  h3 {
+    @include heading;
+    text-align: center;
+    margin: 50px 0;
+    @include desktop {
+      margin: 3vw 0;
+    }
+  }
+  ul {
+    list-style-type: none;
+    @include container;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      width: 30%;
+
+      @include phone {
+        width: 45%;
+        //max-width: 15em;
+        margin-bottom: 25px;
+      }
+
+      @include tablet {
+        width: 30%;
+      }
+
+      @include desktop {
+        width: 25%;
+      }
+
+      > div {
+        padding: 1vw 0;
+        text-align: center;
+        p {
+          @include text-xs;
+          font-weight: 300;
+          margin: 0;
+        }
+        a {
+          @include text-xs;
+          @include link;
+        }
+      }
+    }
+  }
+}
 .infographic {
   display: flex;
   flex-direction: column;
