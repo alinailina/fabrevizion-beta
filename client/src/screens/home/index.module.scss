@@ -113,7 +113,7 @@
   // Texts
   .card2,
   .card4 {
-    background-color: $linen;
+    background-color: white;
     padding: 50px 0;
     @include desktop {
       padding: 5vw 0;
@@ -144,7 +144,7 @@
   // Img
   .card3 {
     // Parallax
-    background-image: url("../../assets/bg1-1.svg");
+    background-image: url("../../assets/bg1.svg");
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -185,13 +185,12 @@
 
   // 4R
   .card6 {
-    background-color: $linen;
-
+    background-color: white;
     > div {
       @include container;
-      padding: 50px 0;
+      padding: 50px 0 0;
       @include desktop {
-        padding: 5vw 0;
+        padding: 5vw 0 0;
       }
       text-align: center;
 
