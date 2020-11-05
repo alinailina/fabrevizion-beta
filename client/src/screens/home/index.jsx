@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 // Styles
 import styles from "./index.module.scss";
 
-import { GoCheck} from 'react-icons/go';
-
+import { GoCheck } from "react-icons/go";
 
 const Home = () => {
   return (
@@ -120,20 +119,27 @@ const Home = () => {
             <li>
               <p>
                 {" "}
-                <span><GoCheck /></span> вы заинтересованы в более экологичных
-                продуктах и услугах,
+                <span>
+                  <GoCheck />
+                </span>{" "}
+                вы заинтересованы в более экологичных продуктах и услугах,
               </p>
             </li>
             <li>
               <p>
-                <span><GoCheck /></span> вы стремитесь улучшить социальные и
-                экологические показатели вашей компании,
+                <span>
+                  <GoCheck />
+                </span>{" "}
+                вы стремитесь улучшить социальные и экологические показатели
+                вашей компании,
               </p>
             </li>
             <li>
               <p>
-                <span><GoCheck /></span> вы поставили перед собой задачи по
-                реальному достижению{" "}
+                <span>
+                  <GoCheck />
+                </span>{" "}
+                вы поставили перед собой задачи по реальному достижению{" "}
                 <a
                   href="https://www.un.org/sustainabledevelopment/ru/about/development-agenda/"
                   target="_blank"
