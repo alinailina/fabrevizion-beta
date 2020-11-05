@@ -52,8 +52,9 @@
   background-color: $gray;
   padding: 25px 0;
   @include desktop {
-    padding: 2vw 0;
+    padding: 0.5vw 0 2vw;
   }
+
   h3 {
     @include heading;
     text-align: center;
@@ -106,6 +107,16 @@
 
 // Как мы работаем
 .process {
+  @include phone {
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
+  }
+  @include desktop {
+    margin: 4vw auto 8vw;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -113,7 +124,6 @@
 
     li {
       display: flex;
-
       &:nth-of-type(2),
       &:nth-of-type(4) {
         flex-direction: row-reverse;
@@ -172,25 +182,23 @@
           width: 100%;
 
           > div {
-            width: 80%;
-            margin: 0 auto;
-          }
-
-          span {
-            @include heading;
-            border-left: 1px solid $green;
-            padding: 0 10px;
-          }
-
-          p {
-            display: block;
-            @include text;
-
-            a {
-              @include link;
-            }
+            width: 90%;
           }
         }
+      }
+    }
+  }
+
+  > div {
+    @include container;
+    p {
+      @include text;
+      text-align: center;
+      @include phone {
+        text-align: left;
+      }
+      a {
+        @include link;
       }
     }
   }
