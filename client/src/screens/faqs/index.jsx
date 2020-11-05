@@ -20,7 +20,7 @@ const FAQs = () => {
 
   // Get all entries
   useEffect(() => {
-    console.log(loading);
+    
     setLoading(true);
     client
       .getEntries()
@@ -28,6 +28,7 @@ const FAQs = () => {
       .catch(console.error);
     setLoading(false);
   }, []);
+  console.log(loading);
 
   // Filter faqs
   const faqs = [];

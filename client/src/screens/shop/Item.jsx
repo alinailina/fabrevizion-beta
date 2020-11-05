@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { BsPlusCircle } from "react-icons/bs";
+
 
 const Item = ({ item }) => {
   const { title, images } = item.fields;

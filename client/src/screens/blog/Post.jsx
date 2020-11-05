@@ -1,14 +1,14 @@
-import React, { useRouteMatch } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // Date functions
-import { formatDate, formatMonth, formatYear } from "./Date";
+//import { formatDate, formatMonth, formatYear } from "./Date";
 
 // Styles
 import styles from "./index.module.scss";
 
 const Post = ({ post }) => {
-  const { date, type, title } = post.fields;
+  const {  type, title } = post.fields;
   const { file } = post.fields.heroImage.fields;
 
   return (

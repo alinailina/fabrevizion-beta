@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 
 import { SiInstagram } from "react-icons/si";
 
-import { GrInstagram } from "react-icons/gr";
+
 // Styles
 import "./index.scss";
 

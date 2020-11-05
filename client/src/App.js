@@ -17,7 +17,7 @@ import Principles from "./screens/company/Principles";
 
 // Shop
 import Shop from "./screens/shop";
-import ItemDetails from "./screens/shop/ItemDetails";
+
 
 // Events
 import FAQs from "./screens/faqs";

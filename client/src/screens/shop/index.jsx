@@ -23,7 +23,7 @@ const Shop = () => {
 
   // Get all entries
   useEffect(() => {
-    console.log(loading);
+ 
     setLoading(true);
     client
       .getEntries()
@@ -31,7 +31,7 @@ const Shop = () => {
       .catch(console.error);
     setLoading(false);
   }, []);
-
+  console.log(loading);
   // Filter shop items
   const shopItems = [];
   entries.filter((entry) =>

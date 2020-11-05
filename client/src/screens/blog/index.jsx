@@ -23,7 +23,7 @@ const Blog = () => {
 
   // Get all entries
   useEffect(() => {
-    console.log(loading);
+    
     setLoading(true);
     client
       .getEntries()
@@ -31,7 +31,7 @@ const Blog = () => {
       .catch(console.error);
     setLoading(false);
   }, []);
-
+  console.log(loading);
   // Filter blog entries
   const posts = [];
   entries.filter((entry) =>
