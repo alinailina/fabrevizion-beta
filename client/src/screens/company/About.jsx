@@ -9,6 +9,10 @@ import Infographic from "./Infographic";
 import styles from "./index.module.scss";
 import Team from "./Team";
 
+// Bullet point
+import { GoPrimitiveDot} from 'react-icons/go';
+
+
 const About = () => {
   return (
     <div>
@@ -22,10 +26,7 @@ const About = () => {
         <ul>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы обеспечим правильную современную переработку и утилизацию
@@ -34,10 +35,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы предлагаем нашим клиентам альтернативные текстильные материалы
@@ -46,10 +44,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               наши дизайнеры продумают весь жизненный цикл новых изделий так,
@@ -60,10 +55,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               используя новейшие технологии, мы экономим огромное количество
@@ -74,10 +66,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы оптимизируем логистику и стараемся перерабатывать отходы там,
@@ -88,10 +77,7 @@ const About = () => {
 
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы поможем нашим партнерам и клиентам придерживаться концепции
@@ -100,10 +86,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               вместе с Вами достигнем важного результата - ни грамма текстильных
@@ -112,10 +95,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               благодаря удачному месторасположению в Санкт-Петербурге, наша
@@ -126,10 +106,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы гарантируем нашим клиентам полную прозрачность, высокое
@@ -138,10 +115,7 @@ const About = () => {
           </li>
           <li>
             <span>
-              <img
-                src={require("../../assets/bullet-point.svg")}
-                alt="bullet-point"
-              />
+            <GoPrimitiveDot />
             </span>
             <p>
               мы стремимся к рентабельному, взаимовыгодному и честному
@@ -158,9 +132,8 @@ const About = () => {
             </p>
           </li>
         </ul>
-    
       </div>
-<Team/>
+      <Team />
     </div>
   );
 };

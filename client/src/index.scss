@@ -8,7 +8,8 @@ $linen: #faf0e6;
 $brown: #deaa88;
 $gray: #f2f2f2;
 $dark-gray: #e0e0e0;
-$green: #4f772d;
+$green: #538d22;
+$light-green: #73a942;
 //$green: #a7c957;
 // rgb(167, 201, 87)
 $yellow: #f9e76f;
@@ -58,11 +59,11 @@ body {
 }
 
 .highlight-green {
-  background: linear-gradient(to top, $green 20%, transparent 20%);
+  background: linear-gradient(to top, #73a942 20%, transparent 20%);
 }
 
 .underline-green {
-  background: linear-gradient(to top, $green 20%, transparent 20%);
+  background: linear-gradient(to top, $light-green 20%, transparent 20%);
 }
 
 .highlight-brown {
@@ -200,7 +201,7 @@ img {
   padding: 10px 5px;
   border: none;
   border-radius: 1px;
-  background-color: $green;
+
   margin: 0;
   transition: all 0.25s ease;
   cursor: pointer;
@@ -210,8 +211,9 @@ img {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   background-color: $green;
+
   &:hover {
-    background-color: rgba(167, 201, 87, 0.8);
+    background-color: rgba(84, 140, 47, 0.75);
   }
   // For links
   text-decoration: none;

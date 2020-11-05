@@ -44,7 +44,7 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <p className="copyright">© Fabrevizion, 2020.</p>
+      <p className="copyright">© FabRevizion, 2020.</p>
     </footer>
   );
 };
