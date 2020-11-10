@@ -27,8 +27,10 @@ import Events from "./screens/events";
 // Blog
 import Blog from "./screens/blog";
 import FullPost from "./screens/blog/FullPost";
+
 // Contact
 import Contacts from "./screens/contacts";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
 
         {/* Contact */}
         <Route path="/контакты" component={Contacts} />
+        
+        <Route path='/политикаконфиденциальности' component={PrivacyPolicy}/>
       </Switch>
       <BackToTop />
       <Footer />

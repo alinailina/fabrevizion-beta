@@ -515,3 +515,30 @@ footer {
     margin: 0;
   }
 }
+
+.pp {
+  @include container;
+  @include phone {
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
+  }
+  @include desktop {
+    margin: 4vw auto 8vw;
+  }
+  p {
+    @include text;
+  }
+
+  ul {
+    li {
+      @include text;
+    }
+  }
+
+  h2,
+  h3 {
+    font-weight: 300;
+  }
+}
