@@ -13,11 +13,11 @@ const Post = ({ post }) => {
 
   return (
     <div className={styles.post}>
-      {/* <p>
+      {/* <p>s
         {formatDate(date)} / {formatMonth(date)} / {formatYear(date)}
-      </p> */}
+      </p>  */}
       <p>{type} </p>
-      <Link to={{ pathname: `/post/${title}`, state: { post: post } }}>
+      <Link to={{ pathname: `/блог/${title}`, state: { post: post } }}>
         <img src={file.url} alt="hero-img" />{" "}
       </Link>
       <h3>{title}</h3>

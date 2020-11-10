@@ -18,33 +18,34 @@
     align-items: flex-start;
 
     // Menu
-    aside {
-      width: 20%;
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        li {
-          margin-bottom: 10px;
-          a {
-            @include text-xs;
-            font-weight: 100;
-            color: $black;
-            &:hover {
-              color: $green;
-            }
-            text-decoration: none;
+    // aside {
+    //   width: 20%;
+    //   ul {
+    //     padding: 0;
+    //     margin: 0;
+    //     list-style-type: none;
+    //     li {
+    //       margin-bottom: 10px;
+    //       a {
+    //         @include text-xs;
+    //         font-weight: 100;
+    //         color: $black;
+    //         &:hover {
+    //           color: $green;
+    //         }
+    //         text-decoration: none;
 
-            &.active {
-              @include underline-green;
-            }
-          }
-        }
-      }
-    }
+    //         &.active {
+    //           @include underline-green;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
 
     main {
-      width: 75%;
+      // width: 75%;
+      width: 100%;
     }
 
     @media only screen and (max-width: 550px) {
@@ -121,12 +122,16 @@
 // Full post
 .fullPost {
   @include container;
+  padding: 150px 0 0;
   margin-bottom: 100px;
 
   @include phone {
     margin-bottom: 50px;
+    padding: 12vw 0 0;
   }
+
   @include desktop {
+    padding: 10vw 0 0;
     margin-bottom: 10vw;
   }
 
@@ -137,7 +142,7 @@
 
   .img {
     width: 50%;
-    margin: 0 auto;
+    margin: 25px auto 0;
     img {
       width: 100%;
     }

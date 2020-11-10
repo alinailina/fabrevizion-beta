@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
+import { Switch, Route, NavLink, Link, useRouteMatch } from "react-router-dom";
 
 // Children
 import Header from "../../components/Header";
@@ -71,7 +71,8 @@ const Shop = () => {
           <p>
             Наш магазин готовится к запуску в он-лайн режиме. Если вы хотите
             купить или заказать готовые изделия из вторичного текстиля,
-            представленные в галерее ниже, пишите и звоните нам. Мы всегда рады
+            представленные в галерее ниже, <Link to='/контакты'>пишите и звоните нам</Link>
+            . Мы всегда рады
             вам помочь!
           </p>
         </div>

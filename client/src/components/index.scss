@@ -20,13 +20,13 @@ nav {
       //background-color: linen;
       padding: 2px;
       display: flex;
-      width: 45px;
+      width: 65px;
       margin: 0 20px;
 
       border-radius: 50px;
 
       @include desktop {
-        width: 3.5vw;
+        width: 5vw;
         margin: 0 2vw;
       }
 

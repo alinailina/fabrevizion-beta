@@ -72,10 +72,7 @@ const Home = () => {
             </li>
             <li>
               <div>
-                <img
-                  src={require("../../assets/arr_reuse.svg")}
-                  alt="reuse"
-                />
+                <img src={require("../../assets/arr_reuse.svg")} alt="reuse" />
               </div>
               <span>reuse</span>
               <p>новое применение использованному текстилю</p>

@@ -26,7 +26,7 @@ import Events from "./screens/events";
 
 // Blog
 import Blog from "./screens/blog";
-
+import FullPost from "./screens/blog/FullPost";
 // Contact
 import Contacts from "./screens/contacts";
 
@@ -54,7 +54,8 @@ function App() {
         <Route path="/события" component={Events} />
 
         {/* Blog */}
-        <Route path="/блог" component={Blog} />
+        <Route exact path="/блог" component={Blog} />
+        <Route path="/блог/:title" component={FullPost} />
 
         {/* Contact */}
         <Route path="/контакты" component={Contacts} />

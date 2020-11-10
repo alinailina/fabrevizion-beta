@@ -28,17 +28,17 @@ const Navbar = () => {
           <p>Компания</p>
           <ul>
             <li>
-              <NavLink to="компания" activeClassName="navlink-active">
+              <NavLink to="/компания" activeClassName="navlink-active">
                 О нас
               </NavLink>
             </li>
             <li>
-              <NavLink to="процесс" activeClassName="navlink-active">
+              <NavLink to="/процесс" activeClassName="navlink-active">
                 Как мы работаем
               </NavLink>
             </li>
             <li>
-              <NavLink to="принципы" activeClassName="navlink-active">
+              <NavLink to="/принципы" activeClassName="navlink-active">
                 Наши принципы
               </NavLink>
             </li>
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <li>
           <NavLink
-            to="магазин"
+            to="/магазин"
             onClick={toggleActive}
             activeClassName="navlink-active"
           >
@@ -56,7 +56,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="вопросыиответы"
+            to="/вопросыиответы"
             onClick={toggleActive}
             activeClassName="navlink-active"
           >
@@ -74,7 +74,7 @@ const Navbar = () => {
         </li> */}
         <li>
           <NavLink
-            to="блог"
+            to="/блог"
             onClick={toggleActive}
             activeClassName="navlink-active"
           >
@@ -83,7 +83,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="контакты"
+            to="/контакты"
             onClick={toggleActive}
             activeClassName="navlink-active"
           >

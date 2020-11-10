@@ -1,21 +1,13 @@
 import React from "react";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-// Date helper functions
-import { formatDate, formatMonth, formatYear } from "./Date";
 
 // Styles
 import styles from "./index.module.scss";
 
-// Children
-import Header from "../../components/Header";
-
 const FullPost = (props) => {
   const post = props.location.state.post;
   console.log(post);
-
-  let { path, url } = useRouteMatch();
-
-  const { date, type, title, bodyText } = post.fields;
+  const { type, title, bodyText } = post.fields;
 
   // Img + description
   const { file, description } = post.fields.heroImage.fields;
@@ -25,12 +17,11 @@ const FullPost = (props) => {
 
   return (
     <div className={styles.fullPost}>
-      <Header title="" />
       <p>{type}</p>
       <h1>{title}</h1>
-      <p className={styles.date}>
+      {/* <p className={styles.date}>
         {formatDate(date)} / {formatMonth(date)} / {formatYear(date)}
-      </p>
+      </p> */}
       <div className={styles.img}>
         <img src={file.url} alt="hero-img" />
       </div>

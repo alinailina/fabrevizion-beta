@@ -15,6 +15,9 @@
 
   > p {
     @include text;
+    &:first-of-type {
+      text-align: center;
+    }
     a {
       @include link;
     }
@@ -49,7 +52,7 @@
 }
 // Наша команда
 .team {
-  background-color: $gray;
+  background-color: $linen;
   padding: 25px 0;
   @include desktop {
     padding: 0.5vw 0 2vw;
@@ -190,15 +193,19 @@
 
   > div {
     @include container;
+    text-align: center;
     p {
       @include text;
-      text-align: center;
+
       @include phone {
         text-align: left;
       }
       a {
         @include link;
       }
+    }
+    a {
+      @include link;
     }
   }
 }
@@ -223,6 +230,9 @@
     }
     a {
       @include link;
+    }
+    &:last-of-type {
+      text-align: center;
     }
   }
 
