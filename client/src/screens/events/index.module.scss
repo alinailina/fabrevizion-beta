@@ -2,13 +2,14 @@
 
 .container {
   @include container;
-  margin-bottom: 150px;
-
   @include phone {
-    margin-bottom: 100px;
+    margin: 25px auto 50px;
+  }
+  @include tablet {
+    margin: 50px auto 100px;
   }
   @include desktop {
-    margin-bottom: 10vw;
+    margin: 4vw auto 8vw;
   }
 
   > p {
@@ -46,7 +47,7 @@
           outline: none;
           -webkit-appearance: none;
           border-radius: 1px;
-          margin: 10px 0 0;
+          margin: 0;
         }
 
         p {

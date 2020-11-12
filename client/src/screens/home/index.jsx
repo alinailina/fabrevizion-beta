@@ -137,13 +137,12 @@ const Home = () => {
                   <GoCheck />
                 </span>{" "}
                 вы поставили перед собой задачи по реальному достижению{" "}
-                <a
-                  href="https://www.un.org/sustainabledevelopment/ru/about/development-agenda/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+             
+                <Link
+                 to='/блог'
                 >
                   Повестки устойчивого развития-2030.
-                </a>
+                </Link>
               </p>
             </li>
           </ul>

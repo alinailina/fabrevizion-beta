@@ -125,7 +125,7 @@ const Shop = () => {
                 {filteredItems.length ? (
                   <Items shopItems={filteredItems} />
                 ) : (
-                  <p>В данном разделе нет товаров.</p>
+                  <p>Раздел находится в разработке.</p>
                 )}
               </Route>
             </Switch>
